@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+'use client';
+
+import React from 'react';
 import HeroSection from '@/components/HeroSection';
+import ImageViewer from '@/components/ImageViewer';
 
 export default function Contact() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  
   return (
     <div className="bg-white">
       <HeroSection 
@@ -69,10 +69,10 @@ export default function Contact() {
                     <h4 className="font-semibold text-gray-800 mb-2">Email:</h4>
                     <p className="text-gray-700 text-sm sm:text-base">
                       <a 
-                        href="mailto:support@castlepharma.co.in"
+                        href="mailto:support@castlepharma.com"
                         className="text-blue-600 hover:text-blue-800 transition-colors break-all"
                       >
-                        support@castlepharma.co.in
+                        support@castlepharma.com
                       </a>
                     </p>
                   </div>
@@ -191,10 +191,10 @@ export default function Contact() {
               <h3 className="text-lg font-semibold text-blue-800 mb-2">Email Us</h3>
               <p className="text-gray-600 text-sm mb-3">Send us your inquiries</p>
               <a 
-                href="mailto:support@castlepharma.co.in"
+                href="mailto:support@castlepharma.com"
                 className="text-blue-600 hover:text-blue-800 transition-colors font-medium"
               >
-                support@castlepharma.co.in
+                support@castlepharma.com
               </a>
             </div>
 
@@ -218,15 +218,11 @@ export default function Contact() {
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-blue-800 mb-6">Our Certification</h2>
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div 
-                className="w-48 h-60 mx-auto mb-6 relative cursor-pointer group"
-                onClick={() => setSelectedImage("/images/certificate-big.gif")}
-              >
-                <Image
+              <div className="w-48 h-60 mx-auto mb-6 p-2">
+                <ImageViewer
                   src="/images/certificate-big.gif"
                   alt="WHO GMP Certificate - Castle Pharma"
-                  fill
-                  className="object-contain rounded-lg group-hover:scale-105 transition-transform duration-200"
+                  className="w-full h-full object-contain"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-200 flex items-center justify-center rounded-lg">
                   <div className="bg-white bg-opacity-90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
@@ -272,33 +268,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
-      {/* Image Modal */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-4xl max-h-full">
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
-            >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <div className="relative w-full h-96 sm:h-[500px] md:h-[600px]">
-              <Image
-                src={selectedImage}
-                alt="Certificate Detail"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

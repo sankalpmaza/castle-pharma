@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import ImageViewer from './ImageViewer';
 
 interface HeroSectionProps {
   title: string;
@@ -60,13 +60,11 @@ export default function HeroSection({
           
           {/* Hero Image Section */}
           <div className="flex justify-center lg:justify-end h-full order-1 lg:order-2">
-            <div className="relative w-full max-w-md lg:max-w-full h-[250px] sm:h-[300px] lg:h-[400px]">
-              <Image
+            <div className="w-full max-w-md lg:max-w-full h-[250px] sm:h-[300px] lg:h-[400px] p-4">
+              <ImageViewer
                 src="/images/castlepharma_hero.png"
                 alt="Castle Pharma - Pharmaceutical Excellence"
-                fill
-                className="object-contain drop-shadow-2xl"
-                priority
+                className="w-full h-full object-contain drop-shadow-2xl"
               />
             </div>
           </div>

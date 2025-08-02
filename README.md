@@ -91,7 +91,7 @@ Post Poynad, Taluka Alibag
 District Raigad - 402 108, Maharashtra, India
 
 - **Phone**: +91/02141/252674
-- **Email**: support@castlepharma.co.in
+- **Email**: support@castlepharma.com
 
 ## 📄 License
 

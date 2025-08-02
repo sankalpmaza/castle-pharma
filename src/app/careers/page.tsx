@@ -144,10 +144,10 @@ export default function Careers() {
               <div className="bg-blue-50 p-6 rounded-lg">
                 <p className="text-blue-800 font-semibold mb-2">Email your resume to:</p>
                 <a 
-                  href="mailto:info@castlepharma.co.in"
+                  href="mailto:info@castlepharma.com"
                   className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors"
                 >
-                  info@castlepharma.co.in
+                  info@castlepharma.com
                 </a>
               </div>
             </div>

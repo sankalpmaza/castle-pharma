@@ -1,35 +1,15 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+'use client';
+
+import React from 'react';
 import HeroSection from '@/components/HeroSection';
+import ImageViewer from '@/components/ImageViewer';
 
 export default function About() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  
-  const aboutStats = [
-    {
-      icon: "🚀",
-      title: "Fast Growing",
-      subtitle: "Indian Pharma"
-    },
-    {
-      icon: "⭐",
-      title: "Excellence",
-      subtitle: "Quality Focus"
-    },
-    {
-      icon: "🤝",
-      title: "Trust",
-      subtitle: "Global Partners"
-    }
-  ];
-
   return (
     <div className="bg-white">
       <HeroSection 
         title="About Castle Pharma"
         description="Dedicated to good health"
-        showStats={true}
-        stats={aboutStats}
       />
 
       {/* Main Content */}
@@ -90,23 +70,12 @@ export default function About() {
               {/* WHO GMP Certificate */}
               <div className="bg-green-50 rounded-lg p-4 sm:p-6 text-center">
                 <h3 className="text-lg sm:text-xl font-semibold text-green-800 mb-4">Our Certification</h3>
-                <div 
-                  className="w-36 h-44 sm:w-48 sm:h-60 mx-auto mb-4 relative cursor-pointer group"
-                  onClick={() => setSelectedImage("/images/certificate-big.gif")}
-                >
-                  <Image
+                <div className="w-36 h-44 sm:w-48 sm:h-60 mx-auto mb-4 p-2">
+                  <ImageViewer
                     src="/images/certificate-big.gif"
                     alt="WHO GMP Certificate - Castle Pharma"
-                    fill
-                    className="object-contain rounded-lg group-hover:scale-105 transition-transform duration-200"
+                    className="w-full h-full object-contain"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-200 flex items-center justify-center rounded-lg">
-                    <div className="bg-white bg-opacity-90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                      <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                      </svg>
-                    </div>
-                  </div>
                 </div>
                 <p className="text-green-700 font-semibold text-sm sm:text-base">WHO GMP Certified</p>
                 <p className="text-xs sm:text-sm text-green-600 mt-2">International Quality Standards</p>
@@ -115,23 +84,12 @@ export default function About() {
               {/* Company Building */}
               <div className="bg-blue-100 rounded-lg p-4 sm:p-6 text-center">
                 <h3 className="text-lg sm:text-xl font-semibold text-blue-800 mb-4">Our Facility</h3>
-                <div 
-                  className="w-full h-36 sm:h-48 relative mb-4 rounded-lg overflow-hidden cursor-pointer group"
-                  onClick={() => setSelectedImage("/images/building.jpg")}
-                >
-                  <Image
+                <div className="w-full h-36 sm:h-48 mb-4 rounded-lg overflow-hidden p-2">
+                  <ImageViewer
                     src="/images/building.jpg"
                     alt="Castle Pharma Manufacturing Facility"
-                    fill
-                    className="object-cover rounded-lg group-hover:scale-105 transition-transform duration-200"
+                    className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-200 flex items-center justify-center">
-                    <div className="bg-white bg-opacity-90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                      </svg>
-                    </div>
-                  </div>
                 </div>
                 <p className="text-blue-700 text-sm sm:text-base">Castle Pharma facilities and team</p>
               </div>
@@ -195,33 +153,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Image Modal */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-4xl max-h-full">
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
-            >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <div className="relative w-full h-96 sm:h-[500px] md:h-[600px]">
-              <Image
-                src={selectedImage}
-                alt="Image Detail"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
