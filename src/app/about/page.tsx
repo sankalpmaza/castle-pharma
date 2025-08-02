@@ -81,18 +81,6 @@ export default function About() {
                 <p className="text-xs sm:text-sm text-green-600 mt-2">International Quality Standards</p>
               </div>
 
-              {/* Company Building */}
-              <div className="bg-blue-100 rounded-lg p-4 sm:p-6 text-center">
-                <h3 className="text-lg sm:text-xl font-semibold text-blue-800 mb-4">Our Facility</h3>
-                <div className="w-full h-36 sm:h-48 mb-4 rounded-lg overflow-hidden p-2">
-                  <ImageViewer
-                    src="/images/building.jpg"
-                    alt="Castle Pharma Manufacturing Facility"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-blue-700 text-sm sm:text-base">Castle Pharma facilities and team</p>
-              </div>
 
               {/* Contact Information */}
               <div className="bg-gray-50 p-4 sm:p-6 rounded-lg">
@@ -100,8 +88,8 @@ export default function About() {
                 <div className="space-y-2 text-gray-700">
                   <p className="text-sm sm:text-base">
                     <strong>Email:</strong> 
-                    <a href="mailto:info@Castlepharma.in" className="text-blue-600 hover:text-blue-800 ml-2 break-all">
-                      info@Castlepharma.in
+                    <a href="mailto:info@castlepharma.com" className="text-blue-600 hover:text-blue-800 ml-2 break-all">
+                      info@castlepharma.com
                     </a>
                   </p>
                 </div>
