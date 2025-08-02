@@ -97,7 +97,6 @@ export default function Home() {
               <div className="bg-emerald-50 p-4 sm:p-6 rounded-lg w-full flex flex-col justify-center items-center text-center border border-emerald-200">
                 <div 
                   className="w-full max-w-60 sm:max-w-80 h-64 sm:h-96 mx-auto mb-4 sm:mb-6 relative cursor-pointer group"
-                  onClick={() => setSelectedImage("/images/certificate-big.gif")}
                 >
                   <Image
                     src="/images/certificate-big.gif"
