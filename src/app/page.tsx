@@ -1,0 +1,150 @@
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import HeroSection from '@/components/HeroSection';
+
+export default function Home() {
+  const homePageStats = [
+    {
+      icon: "🏆",
+      title: "WHO GMP",
+      subtitle: "Certified Quality"
+    },
+    {
+      icon: "🌍",
+      title: "Global Reach",
+      subtitle: "Multiple Countries"
+    },
+    {
+      icon: "💼",
+      title: "Expertise",
+      subtitle: "Bio-Pharmaceutical"
+    }
+  ];
+
+  return (
+    <div className="bg-white">
+      <HeroSection 
+        title="Welcome to Castle Pharma"
+        description="Extending Concern in Healthcare with Ethics... Values... & Commitment..."
+        showStats={true}
+        stats={homePageStats}
+      />
+
+      {/* Main Content */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            {/* Left Content */}
+            <div className="space-y-6">
+              <div className="prose prose-lg max-w-none">
+                <p className="text-gray-700 leading-relaxed text-base mb-4">
+                  Castle Pharma was incorporated to pursue an ambitious goal of introducing
+                  specialized healthcare products to meet the needs of a quality conscious market.
+                </p>
+                
+                <p className="text-gray-700 leading-relaxed text-base">
+                  Today, Castle Pharma is one of the fast growing Indian bio-pharmaceutical
+                  companies. The product portfolio comprises of a wide range of products such as all
+                  forms of Tablets / Capsules, Dry-Syrups & Liquid Syrups, Ointments, Antibiotic,
+                  Injectables, Eye-Ear drops, Vaccines, Protein Powders, Food Supplements, Dietary
+                  Supplements etc.
+                </p>
+              </div>
+
+              {/* Our Strengths */}
+              <div className="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                <h3 className="text-xl font-semibold text-slate-800 mb-4">Our Strengths:</h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-3 mt-0.5 text-lg">•</span>
+                    <span className="text-base">Quality Manufacturing in WHO GMP Standards</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-3 mt-0.5 text-lg">•</span>
+                    <span className="text-base">Affordable medicines to all</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-3 mt-0.5 text-lg">•</span>
+                    <span className="text-base">Vast range of quality products</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-3 mt-0.5 text-lg">•</span>
+                    <span className="text-base">Global reach</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-3 mt-0.5 text-lg">•</span>
+                    <span className="text-base">Tamper proof packing</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-3 mt-0.5 text-lg">•</span>
+                    <span className="text-base">Wide industry and marketing experience</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-3 mt-0.5 text-lg">•</span>
+                    <span className="text-base">Timely deliveries</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Right Content */}
+            <div className="flex">
+              {/* ISO Certificate */}
+              <div className="bg-emerald-50 p-6 rounded-lg w-full flex flex-col justify-center items-center text-center border border-emerald-200">
+                <div className="w-full max-w-80 h-96 mx-auto mb-6 relative">
+                  <Image
+                    src="/images/certificate-big.gif"
+                    alt="WHO GMP Certificate"
+                    fill
+                    className="object-contain rounded-lg"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-emerald-700 mb-2">WHO GMP Certified Manufacturing</h3>
+                <p className="text-base text-emerald-600">Quality Assurance & International Standards</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-800 mb-4">Why Choose Castle Pharma?</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Discover what makes us a trusted partner in healthcare
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-slate-50 p-6 rounded-lg shadow-sm border border-slate-200 text-center hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-emerald-600 text-2xl">🏭</span>
+              </div>
+              <h3 className="text-xl font-semibold text-slate-800 mb-3">WHO GMP Standards</h3>
+              <p className="text-slate-600 text-base leading-relaxed">Quality manufacturing following international standards</p>
+            </div>
+
+            <div className="bg-slate-50 p-6 rounded-lg shadow-sm border border-slate-200 text-center hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-blue-600 text-2xl">🌍</span>
+              </div>
+              <h3 className="text-xl font-semibold text-slate-800 mb-3">Global Reach</h3>
+              <p className="text-slate-600 text-base leading-relaxed">Serving customers across multiple countries</p>
+            </div>
+
+            <div className="bg-slate-50 p-6 rounded-lg shadow-sm border border-slate-200 text-center hover:shadow-md transition-shadow">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-teal-600 text-2xl">💊</span>
+              </div>
+              <h3 className="text-xl font-semibold text-slate-800 mb-3">Comprehensive Range</h3>
+              <p className="text-slate-600 text-base leading-relaxed">Wide variety of pharmaceutical products</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
