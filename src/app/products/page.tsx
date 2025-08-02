@@ -146,10 +146,10 @@ export default function Products() {
             <p className="text-lg text-gray-700">Explore our range of healthcare products</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {products.map((product, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-64 relative">
+                <div className="h-48 sm:h-64 relative">
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -157,17 +157,17 @@ export default function Products() {
                     className="object-contain p-2"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-blue-800 mb-2">{product.name}</h3>
+                <div className="p-3 sm:p-4">
+                  <h3 className="text-base sm:text-lg font-semibold text-blue-800 mb-2">{product.name}</h3>
                   {product.therapeuticSegment && (
-                    <p className="text-sm text-gray-600 mb-1">
+                    <p className="text-xs sm:text-sm text-gray-600 mb-1">
                       <span className="font-medium">Therapeutic Segment:</span> {product.therapeuticSegment}
                     </p>
                   )}
-                  <p className="text-sm text-gray-600 mb-1">
+                  <p className="text-xs sm:text-sm text-gray-600 mb-1">
                     <span className="font-medium">Form:</span> {product.form}
                   </p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-xs sm:text-sm text-gray-600">
                     <span className="font-medium">Strength:</span> {product.strength}
                   </p>
                 </div>
@@ -262,45 +262,45 @@ export default function Products() {
             <h2 className="text-3xl font-bold text-blue-800 mb-4">Additional Product Categories</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">Ointments</h3>
-              <p className="text-gray-600 text-sm">Topical pharmaceutical preparations</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+              <h3 className="text-base sm:text-lg font-semibold text-blue-800 mb-2">Ointments</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Topical pharmaceutical preparations</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">Antibiotics</h3>
-              <p className="text-gray-600 text-sm">Various antibiotic formulations</p>
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-green-500">
+              <h3 className="text-base sm:text-lg font-semibold text-blue-800 mb-2">Antibiotics</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Various antibiotic formulations</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">Vaccines</h3>
-              <p className="text-gray-600 text-sm">Preventive healthcare solutions</p>
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+              <h3 className="text-base sm:text-lg font-semibold text-blue-800 mb-2">Vaccines</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Preventive healthcare solutions</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">Protein Powders</h3>
-              <p className="text-gray-600 text-sm">Nutritional protein supplements</p>
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-green-500">
+              <h3 className="text-base sm:text-lg font-semibold text-blue-800 mb-2">Protein Powders</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Nutritional protein supplements</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">Food Supplements</h3>
-              <p className="text-gray-600 text-sm">Nutritional food supplement products</p>
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+              <h3 className="text-base sm:text-lg font-semibold text-blue-800 mb-2">Food Supplements</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Nutritional food supplement products</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">Dietary Supplements</h3>
-              <p className="text-gray-600 text-sm">Health and wellness supplements</p>
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-green-500">
+              <h3 className="text-base sm:text-lg font-semibold text-blue-800 mb-2">Dietary Supplements</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Health and wellness supplements</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">Eye-Ear Drops</h3>
-              <p className="text-gray-600 text-sm">Specialized ophthalmic and otic solutions</p>
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+              <h3 className="text-base sm:text-lg font-semibold text-blue-800 mb-2">Eye-Ear Drops</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Specialized ophthalmic and otic solutions</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">Injectables</h3>
-              <p className="text-gray-600 text-sm">Injectable pharmaceutical products</p>
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-green-500">
+              <h3 className="text-base sm:text-lg font-semibold text-blue-800 mb-2">Injectables</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Injectable pharmaceutical products</p>
             </div>
           </div>
         </div>
