@@ -25,12 +25,13 @@ const Header: React.FC = () => {
       {/* Logo section */}
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-center">
-          <Link href="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 hover:opacity-90 transition-opacity">
             {/* Castle Icon */}
             <div className="flex items-center">
               <svg 
-                width="50" 
-                height="50" 
+                width="40" 
+                height="40"
+                className="sm:w-[50px] sm:h-[50px]"
                 viewBox="0 0 100 100" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +48,7 @@ const Header: React.FC = () => {
               </svg>
             </div>
             {/* Company Name */}
-            <span className="text-3xl font-bold text-slate-800 tracking-wide">
+            <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-800 tracking-wide">
               CASTLE PHARMA
             </span>
           </Link>

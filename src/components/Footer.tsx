@@ -7,19 +7,19 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           {/* Navigation links */}
-          <div className="flex flex-wrap justify-center items-center text-sm mb-4">
+          <div className="flex flex-wrap justify-center items-center text-xs sm:text-sm mb-4 gap-2">
             <Link href="/" className="hover:text-blue-200 transition-colors">Home</Link>
-            <span className="mx-2">|</span>
+            <span className="hidden sm:inline mx-1">|</span>
             <Link href="/about" className="hover:text-blue-200 transition-colors">About us</Link>
-            <span className="mx-2">|</span>
+            <span className="hidden sm:inline mx-1">|</span>
             <Link href="/manufacturing" className="hover:text-blue-200 transition-colors">Manufacturing</Link>
-            <span className="mx-2">|</span>
+            <span className="hidden sm:inline mx-1">|</span>
             <Link href="/products" className="hover:text-blue-200 transition-colors">Products</Link>
-            <span className="mx-2">|</span>
+            <span className="hidden sm:inline mx-1">|</span>
             <Link href="/marketing" className="hover:text-blue-200 transition-colors">Marketing</Link>
-            <span className="mx-2">|</span>
+            <span className="hidden sm:inline mx-1">|</span>
             <Link href="/careers" className="hover:text-blue-200 transition-colors">Careers</Link>
-            <span className="mx-2">|</span>
+            <span className="hidden sm:inline mx-1">|</span>
             <Link href="/contact" className="hover:text-blue-200 transition-colors">Contact Us</Link>
           </div>
 

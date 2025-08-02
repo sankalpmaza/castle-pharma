@@ -20,10 +20,10 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 gap-8">
               {/* Registered Office */}
-              <div className="bg-blue-50 p-8 rounded-lg shadow-lg">
-                <h2 className="text-2xl font-bold text-blue-800 mb-6">Registered Office</h2>
+              <div className="bg-blue-50 p-6 sm:p-8 rounded-lg shadow-lg">
+                <h2 className="text-xl sm:text-2xl font-bold text-blue-800 mb-6">Registered Office</h2>
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-lg font-semibold text-blue-700 mb-2">Castle Pharma</h3>
@@ -31,7 +31,7 @@ export default function Contact() {
                   
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-2">Address:</h4>
-                    <p className="text-gray-700 leading-relaxed">
+                    <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                       MIDC Area Bandhan,<br />
                       Plot No.17/1B, Post Poynad,<br />
                       Taluka Alibag,<br />
@@ -44,12 +44,12 @@ export default function Contact() {
                     <h4 className="font-semibold text-gray-800 mb-2">Tel. No.:</h4>
                     <div className="space-y-1">
                      
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-sm sm:text-base">
                         <a href="tel:+919421936203" className="hover:text-blue-600 transition-colors">
                           +91-9421936203
                         </a>
                       </p>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-sm sm:text-base">
                         <a href="tel:+919158144414" className="hover:text-blue-600 transition-colors">
                           +91-9158144414
                         </a>
@@ -60,15 +60,15 @@ export default function Contact() {
 
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-2">Fax:</h4>
-                    <p className="text-gray-700">+91-02141-252674</p>
+                    <p className="text-gray-700 text-sm sm:text-base">+91-02141-252674</p>
                   </div>
 
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-2">Email:</h4>
-                    <p className="text-gray-700">
+                    <p className="text-gray-700 text-sm sm:text-base">
                       <a 
                         href="mailto:support@castlepharma.co.in"
-                        className="text-blue-600 hover:text-blue-800 transition-colors"
+                        className="text-blue-600 hover:text-blue-800 transition-colors break-all"
                       >
                         support@castlepharma.co.in
                       </a>
@@ -78,8 +78,8 @@ export default function Contact() {
               </div>
 
               {/* Contact Form */}
-              <div className="bg-white p-8 rounded-lg shadow-lg border">
-                <h2 className="text-2xl font-bold text-blue-800 mb-6">Send us a Message</h2>
+              <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg border">
+                <h2 className="text-xl sm:text-2xl font-bold text-blue-800 mb-6">Send us a Message</h2>
                 
                 <form className="space-y-6">
                   <div>
@@ -149,7 +149,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium"
+                    className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-sm sm:text-base"
                   >
                     Send Message
                   </button>

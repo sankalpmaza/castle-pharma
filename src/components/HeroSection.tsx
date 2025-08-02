@@ -21,7 +21,7 @@ export default function HeroSection({
   stats = [] 
 }: HeroSectionProps) {
   return (
-    <section className="bg-gradient-to-br from-slate-50 via-emerald-50 to-blue-50 py-8 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-slate-50 via-emerald-50 to-blue-50 py-6 sm:py-8 relative overflow-hidden">
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-100/20 via-transparent to-blue-100/20"></div>
@@ -30,27 +30,27 @@ export default function HeroSection({
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-slate-200/5 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="container mx-auto px-2 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-4 items-center min-h-[400px]">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center min-h-[350px] sm:min-h-[400px]">
           {/* Content Section */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 sm:mb-6">
               {title}
             </h1>
-            <p className="text-xl font-medium text-emerald-600 mb-3">{subtitle}</p>
-            <p className="text-lg text-slate-600 italic leading-relaxed mb-8">
+            <p className="text-lg sm:text-xl font-medium text-emerald-600 mb-2 sm:mb-3">{subtitle}</p>
+            <p className="text-base sm:text-lg text-slate-600 italic leading-relaxed mb-6 sm:mb-8">
               {description}
             </p>
             
             {/* Key Stats */}
             {showStats && stats.length > 0 && (
-              <div className="flex justify-center lg:justify-start space-x-8 mt-8">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 mt-6 sm:mt-8">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-emerald-600 text-xl">{stat.icon}</span>
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-emerald-600 text-lg sm:text-xl">{stat.icon}</span>
                     </div>
-                    <p className="text-sm font-semibold text-slate-700">{stat.title}</p>
+                    <p className="text-xs sm:text-sm font-semibold text-slate-700">{stat.title}</p>
                     <p className="text-xs text-slate-500">{stat.subtitle}</p>
                   </div>
                 ))}
@@ -59,13 +59,13 @@ export default function HeroSection({
           </div>
           
           {/* Hero Image Section */}
-          <div className="flex justify-center lg:justify-end h-full">
-            <div className="relative w-full h-[350px] lg:h-[400px]">
+          <div className="flex justify-center lg:justify-end h-full order-1 lg:order-2">
+            <div className="relative w-full max-w-md lg:max-w-full h-[250px] sm:h-[300px] lg:h-[400px]">
               <Image
                 src="/images/castlepharma_hero.png"
                 alt="Castle Pharma - Pharmaceutical Excellence"
                 fill
-                className="object-cover drop-shadow-2xl"
+                className="object-contain drop-shadow-2xl"
                 priority
               />
             </div>

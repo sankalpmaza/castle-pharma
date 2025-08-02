@@ -181,10 +181,43 @@ export default function Products() {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-blue-800 mb-4">Healthcare Products</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-blue-800 mb-4">Healthcare Products</h2>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          {/* Mobile View - Cards */}
+          <div className="lg:hidden space-y-4 mb-8">
+            {products.map((product, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md p-4">
+                <div className="flex items-start space-x-4">
+                  <div className="w-16 h-16 relative flex-shrink-0">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-contain rounded-md"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-blue-800 mb-1">{product.name}</h3>
+                    {product.therapeuticSegment && (
+                      <p className="text-sm text-gray-600 mb-1">
+                        <span className="font-medium">Therapeutic:</span> {product.therapeuticSegment}
+                      </p>
+                    )}
+                    <p className="text-sm text-gray-600 mb-1">
+                      <span className="font-medium">Form:</span> {product.form}
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      <span className="font-medium">Strength:</span> {product.strength}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop View - Table */}
+          <div className="hidden lg:block bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="bg-blue-600 text-white">
