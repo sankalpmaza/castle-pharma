@@ -33,7 +33,31 @@ const Header: React.FC = () => {
       
       {/* Logo section */}
       <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-center">
+        <div className="flex items-center justify-between md:justify-center">
+          {/* Mobile Hamburger Menu - Top Left */}
+          <button
+            onClick={toggleMobileMenu}
+            className="md:hidden p-2 rounded-md text-blue-700 hover:text-blue-800 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-label="Toggle mobile menu"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {isMobileMenuOpen ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+
+          {/* Company Logo and Name */}
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3 hover:opacity-90 transition-opacity">
             {/* Castle Icon */}
             <div className="flex items-center">
@@ -61,15 +85,18 @@ const Header: React.FC = () => {
               CASTLE PHARMA
             </span>
           </Link>
+
+          {/* Spacer for mobile to center the logo */}
+          <div className="md:hidden w-10"></div>
         </div>
       </div>
 
       {/* Navigation */}
       <nav className="bg-blue-50 border-t border-blue-200">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-center items-center">
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-1 w-full justify-center">
+            <div className="hidden md:flex items-center space-x-1">
               {navItems.map((item, index) => (
                 <React.Fragment key={item.href}>
                   <Link
@@ -88,38 +115,6 @@ const Header: React.FC = () => {
                   )}
                 </React.Fragment>
               ))}
-            </div>
-
-            {/* Mobile Navigation */}
-            <div className="md:hidden w-full flex justify-between items-center py-2">
-              {/* Hamburger Menu Button */}
-              <button
-                onClick={toggleMobileMenu}
-                className="p-2 rounded-md text-blue-700 hover:text-blue-800 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                aria-label="Toggle mobile menu"
-              >
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  {isMobileMenuOpen ? (
-                    <path d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path d="M4 6h16M4 12h16M4 18h16" />
-                  )}
-                </svg>
-              </button>
-              
-              {/* Logo for Mobile */}
-              <span className="text-lg font-semibold text-blue-800">Menu</span>
-              
-              {/* Spacer */}
-              <div className="w-10"></div>
             </div>
           </div>
 
